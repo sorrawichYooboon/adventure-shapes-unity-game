@@ -8,11 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     private Vector2 moveDirection;
-
-    // Update is called once per frame
     void Update()
     {
-        ProcessInputs();
+        ProcessInput();
     }
 
     void FixedUpdate()
@@ -20,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    void ProcessInputs()
+    void ProcessInput()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
